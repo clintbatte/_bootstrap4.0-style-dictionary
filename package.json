@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "caniuse-lite": "^1.0.30000803",
     "core-js": "^2.5.3",
     "exports-loader": "^0.6.4",
     "gulp-cssnano": "^2.1.2",
