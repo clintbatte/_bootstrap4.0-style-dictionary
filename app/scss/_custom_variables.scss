@@ -93,11 +93,11 @@ $font-family-sans-serif:   'Roboto-normal', 'Roboto-300', 'Cordia New', 'Microso
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif;
 
-$font-size-base:              0.875rem; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.43); // targeting `18px`
-$font-size-sm:                ($font-size-base * .86); // targeting `12px`
+$font-size-base:    0.875rem; // setting the base font @ '14px'
+$font-size-lg:      ($font-size-base * 1.286); // targeting `18px`
+$font-size-sm:      ($font-size-base * 0.8571); // targeting `12px`
 
-$line-height-base:            1.2;
+$line-height-base:            1.4;
 
 $h1-font-size:                2.25rem; // ~36px
 $h2-font-size:                1.875rem; // ~30px
@@ -105,3 +105,90 @@ $h3-font-size:                1.5rem; // ~24px
 $h4-font-size:                1.125rem; // ~18px
 $h5-font-size:                0.875rem; //~14px
 $h6-font-size:                0.75rem; // ~12px
+
+$headings-font-weight:        300;
+
+
+$display1-size:               4.375rem; // ~70px
+$display2-size:               4.063rem; // 65px
+$display3-size:               3.438rem; // ~ 55px
+$display4-size:               2.813rem; // ~ 45px
+
+$text-muted:                  $dell-moon;
+$blockquote-small-color:      $dell-carbon;
+$blockquote-font-size:        ($font-size-base * 1.286);
+
+$hr-border-color:             $dell-ash;
+$mark-bg:                     $dell-quartz;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:          0.5714rem;
+$table-cell-padding-sm:       0.3571rem;
+
+$table-bg:                    transparent;
+$table-accent-bg:             $dell-quartz;
+$table-hover-bg:              $dell-cloud;
+$table-active-bg:             $dell-cloud;
+
+$table-border-color:          $dell-ash;
+
+$table-head-bg:               $dell-quartz;
+$table-head-color:            $dell-carbon;
+
+$table-dark-bg:               $dell-carbon;
+$table-dark-accent-bg:        rgba($dell-mist, .05);
+$table-dark-hover-bg:         rgba($dell-mist, .075);
+$table-dark-border-color:     lighten($dell-carbon, 7.5%);
+$table-dark-color:            $body-bg;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         0.625rem;
+$input-btn-padding-x:         0.9375rem;
+$input-btn-line-height:       $line-height-base;
+
+$input-btn-focus-width:       none; //turn off focus state
+
+$input-btn-padding-y-sm:      0.2857rem;
+$input-btn-padding-x-sm:      0.5rem;
+$input-btn-line-height-sm:    $line-height-sm !default;
+
+$input-btn-padding-y-lg:      1.071rem; // same as default btn
+$input-btn-padding-x-lg:      0.7143rem; // same as default btn
+$input-btn-line-height-lg:    $line-height-lg !default;
+
+$input-btn-border-width:      $border-width;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+
+$btn-disabled-opacity:        $dell-moon;
+$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+$btn-link-disabled-color:     $dell-moon;
+
+$btn-block-spacing-y:         .5rem !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           0rem;
+$btn-border-radius-lg:        $btn-border-radius;
+$btn-border-radius-sm:        $btn-border-radius;
+
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+
+// Forms
+
+$input-disabled-bg:                     $dell-moon;
+
+$input-color:                           $dell-moon;
+$input-border-color:                    $dell-ash;
