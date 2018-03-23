@@ -129,17 +129,33 @@ mark,
 // ------------------------------------------
 // font ramp and double byte characters based on media queries 
 
+@font-face {
+    font-family: "Roboto-300";
+    src:url("../fonts/Roboto-300.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto-normal";
+    src:url("../fonts/Roboto-normal.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 @include media-breakpoint-up(xs) { 
     h1, .h1 {
         font-size: 1.5rem; // ~24px
         line-height: 1.75rem; // ~28px
         font-weight: 300;
+        font-family: 'Roboto-300';
     }
 
     h2, .h2 {
         font-size: 1.25rem; // ~20px
         line-height: 1.5rem; // ~24px
         font-weight: 300;
+        font-family: 'Roboto-300';
     }
 
     h3, .h3 {
@@ -147,6 +163,7 @@ mark,
             font-size: 1.125rem; // ~18px
             line-height: 1.375rem; // ~22px
             font-weight: 300;
+            font-family: 'Roboto-300';
         }
     }
 
@@ -154,36 +171,42 @@ mark,
         font-size: 1.063rem; // ~17px
         line-height: 1.25rem; // ~20px
         font-weight: 300;
+        font-family: 'Roboto-300';
     }
 
     h4, .h4 {
         font-size: 1rem; // ~16px
         line-height: 1.25rem; // ~20px
         font-weight: 400;
+        font-family: 'Roboto-normal';
     }
 
     h5, .h5 {
         font-size: 0.875rem; // ~14px
         line-height: 1.25rem; // ~20px
         font-weight: 400;
+        font-family: 'Roboto-normal';
     }
 
     .bold-16 {
         font-size: 1rem; // ~16px
         line-height: 1.25rem; // ~20px
         font-weight: 700;
+        font-family: 'Roboto-normal';
     }
 
     .bold-14 {
         font-size: 0.875rem; // ~14px
         line-height: 1.25rem; // ~20px
         font-weight: 700;
+        font-family: 'Roboto-normal';
     }
 
     .bold-12 {
         font-size: 0.75rem; // ~12px
         line-height: 0.9375rem; // ~15px
         font-weight: 700;
+        font-family: 'Roboto-normal';
     }
 }
 
@@ -193,12 +216,14 @@ mark,
       font-size: 1.875rem; // ~30px
       line-height: 2.25rem; // ~36px
       font-weight: 300;
+      font-family: 'Roboto-300';
   }
 
   h2, .h2 {
       font-size: 1.625rem; // ~26px
       line-height: 1.875rem; // ~30px
       font-weight: 300;
+      font-family: 'Roboto-300';
   }
 
   h3, .h3 {
@@ -206,6 +231,7 @@ mark,
           font-size: 1.375rem; // ~22px
           line-height: 1.625rem; // ~26px
           font-weight: 300;
+          font-family: 'Roboto-300';
       }
   }
 
@@ -213,36 +239,42 @@ mark,
       font-size: 1.25rem; // ~20px
       line-height: 1.5rem; // ~24px
       font-weight: 300;
+      font-family: 'Roboto-300';
   }
 
   h4, .h4 {
       font-size: 1.125rem; // ~18px
       line-height: 1.375rem; // ~22px
       font-weight: 400;
+      font-family: 'Roboto-normal';
   }
 
   h5, .h5 {
       font-size: 1rem; // ~16px
       line-height: 1.25rem; // ~20px
       font-weight: 400;
+      font-family: 'Roboto-normal';
   }
 
   .bold-16 {
       font-size: 1rem; // ~16px
       line-height: 1.25rem; // ~20px
       font-weight: 700;
+      font-family: 'Roboto-normal';
   }
 
   .bold-14 {
       font-size: 0.875rem; // ~14px
       line-height: 1.25rem; // ~20px
       font-weight: 700;
+      font-family: 'Roboto-normal';
   }
 
   .bold-12 {
       font-size: 0.75rem; // ~12px
       line-height: 0.9375rem; // ~15px
       font-weight: 700;
+      font-family: 'Roboto-normal';
   }
 }
 
@@ -251,19 +283,22 @@ mark,
       font-size: 2rem; // ~32px
       line-height: 2.5rem; // ~40px
       font-weight: 300;
+      font-family: 'Roboto-300';
   }
 
   h2, .h2 {
       font-size: 1.75rem; // ~28px
       line-height: 2rem; // ~32px
       font-weight: 300;
+      font-family: 'Roboto-300';
   }
 
   h3, .h3 {
       &.feature {
           font-size: 1.5rem; // ~24px
           line-height: 1.75rem; // ~28px
-          font-weight: 300;
+          ffont-weight: 300;
+          font-family: 'Roboto-300';
       }
   }
 
@@ -271,36 +306,42 @@ mark,
       font-size: 1.25rem; // ~20px
       line-height: 1.5rem; // ~24px
       font-weight: 300;
+      font-family: 'Roboto-300';
   }
 
   h4, .h4 {
       font-size: 1.125rem; // ~18px
       line-height: 1.375rem; // ~22px
       font-weight: 400;
+      font-family: 'Roboto-normal';
   }
 
   h5, .h5 {
       font-size: 1rem ; // ~16px
       line-height: 1.25rem; // ~20px
       font-weight: 400;
+      font-family: 'Roboto-normal';
   }
 
   .bold-16 {
     font-size: 1rem ; // ~16px
     line-height: 1.25rem; // ~20px
-      font-weight: 700;
+    font-weight: 700;
+    font-family: 'Roboto-normal';
   }
 
   .bold-14 {
       font-size: 0.875rem; // ~14px
       line-height: 1.25rem; // ~20px
       font-weight: 700;
+      font-family: 'Roboto-normal';
   }
 
   .bold-12 {
       font-size: 0.75rem; // ~12px
       line-height: 0.9375rem; // ~15px
       font-weight: 700;
+      font-family: 'Roboto-normal';
   }
 }
 
