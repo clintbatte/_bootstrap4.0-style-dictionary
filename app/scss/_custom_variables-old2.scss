@@ -16,7 +16,8 @@ $dell-ash:                        #cccccc;
 $dell-quartz:                     #eeeeee;
 $dell-mist:                       #f9f9f9;
 $dell-moon:                       #767676;
-
+$white:                           #ffffff;
+$black:                           #000000;
 // Dell Colors
 // ------------------------------------------
 $dell-blue:                       #007db8;
@@ -49,341 +50,122 @@ $dell-default-gray:                 $dell-quartz;
 $dell-default-gray-hover:         #DADADA;
 $dell-default-gray-disabled:      #333333;
 
+// Dell Alert Colors
 // ------------------------------------------
-// ------------------------------------------
-
-//
-// Bootstrap Color system
-//
-
-// stylelint-disable
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
-
-$grays: () !default;
-$grays: map-merge((
-  "100": $gray-100,
-  "200": $gray-200,
-  "300": $gray-300,
-  "400": $gray-400,
-  "500": $gray-500,
-  "600": $gray-600,
-  "700": $gray-700,
-  "800": $gray-800,
-  "900": $gray-900
-), $grays);
-
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
-
-$colors: () !default;
-$colors: map-merge((
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
-), $colors);
-
 $primary:       $dell-blue;
 $secondary:     #EEEEEE;
 $success:       #408001;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$info:          $dell-teal;
+$warning:       $dell-orange;
+$danger:        $dell-red;
+$light:         $dell-mist;
+$dark:          $dell-carbon;
 
-$theme-colors: () !default;
-$theme-colors: map-merge((
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-), $theme-colors);
-// stylelint-enable
-
-// Set a specific jump point for requesting color jumps
-$theme-color-interval:      8% !default;
-
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-$yiq-contrasted-threshold: 150 !default;
-
-// Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: $gray-900 !default;
-$yiq-text-light: $white !default;
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-caret:              true !default;
-$enable-rounded:            true !default;
-$enable-shadows:            false !default;
-$enable-gradients:          false !default;
-$enable-transitions:        true !default;
-$enable-hover-media-query:  false !default; // Deprecated, no longer affects any compiled CSS
-$enable-grid-classes:       true !default;
-$enable-print-styles:       true !default;
-
-
-// Spacing
-//
-// Control the default styling of most Bootstrap elements by modifying these
-// variables. Mostly focused on spacing.
-// You can add more entries to the $spacers map, should you need more variation.
-
-// stylelint-disable
-$spacer: 1rem !default;
-$spacers: () !default;
-$spacers: map-merge((
-  0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 1.5),
-  5: ($spacer * 3)
-), $spacers);
-
-// This variable affects the `.h-*` and `.w-*` classes.
-$sizes: () !default;
-$sizes: map-merge((
-  25: 25%,
-  50: 50%,
-  75: 75%,
-  100: 100%
-), $sizes);
-// stylelint-enable
-
-// Body
-//
 // Settings for the `<body>` element.
-
-$body-bg:                   $white !default;
+// ------------------------------------------
+$body-bg:                   $white;
 $body-color:                $dell-carbon;
-// Links
-//
+
 // Style anchor elements.
-
-$link-color:                theme-color(#006bbd);
-$link-decoration:           none !default;
+// ------------------------------------------
+$link-color:              #006bbd;
+$link-decoration:           none;
 $link-hover-color:          $dell-midnight;
-$link-hover-decoration:     underline !default;
+$link-hover-decoration:     underline;
 
-// Paragraphs
-//
-// Style p element.
-
-$paragraph-margin-bottom:   1rem !default;
-
-
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
-
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints);
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-) !default;
-
-@include _assert-ascending($container-max-widths, "$container-max-widths");
-
-// Grid columns
-//
-// Set the number of columns and specify the width of the gutters.
-
-$grid-columns:                12 !default;
-$grid-gutter-width:           30px !default;
-
-// Components
-//
 // Define common padding and border radius sizes and more.
+// ------------------------------------------
+$line-height-lg:              1.5;
+$line-height-sm:              1.5;
 
-$line-height-lg:              1.5 !default;
-$line-height-sm:              1.5 !default;
-
-$border-width:                1px !default;
+$border-width:                1px;
 $border-color:                $dell-ash;
 
-$border-radius:               .25rem !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-sm:            .2rem !default;
-
-$component-active-color:      $white !default;
-$component-active-bg:         theme-color("primary") !default;
-
-$caret-width:                 .3em !default;
-
-$transition-base:             all .2s ease-in-out !default;
-$transition-fade:             opacity .15s linear !default;
-$transition-collapse:         height .35s ease !default;
-
+$border-radius:               0.0625rem;
+$border-radius-lg:            0.3125rem;
+$border-radius-sm:            0.0625rem;
 
 // Fonts
-//
+// ------------------------------------------
 // Font, line-height, and color for body text, headings, and more.
-
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:   'Roboto-normal', 'Roboto-300', 'Cordia New', 'Microsoft Sans Serif', 'Utsaah', 'Devanagari MT', 'Nirmala UI', 'Latha', 'InaiMathi', 'Gautami', 'Telugu Sangam MN', 'Tunga', 'Kannada Sangam MN', 'Kartika', 'Malayalam Sangam MN', 'Shruti', 'Nirmala UI', 'Gujarati MT', 'Gujarati Sangam MN', 'Vrinda', 'Bangla Sangam MN', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', '맑은 고딕', 'Gulim', 'AppleGothic', 'Apple LiGothic', 'LiHei Pro', 'Osaka', 'STHeiti', '华文黑体', 'STXihei', '华文细黑', 'SimHei', '黑体', 'Arial Unicode MS', 'Arial', sans-serif;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif;
-// stylelint-enable value-keyword-case
 
-$font-size-base:              0.875rem; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.25) !default;
-$font-size-sm:                ($font-size-base * .875) !default;
+$font-size-base:    0.875rem; // setting the base font @ '14px'
+$font-size-lg:      1.125rem; // targeting `18px`
+$font-size-sm:      0.75rem; // targeting `12px`
 
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
+$line-height-base:            1.5;
 
-$font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$h1-font-size:                2.25rem; // ~36px
+$h2-font-size:                1.875rem; // ~30px
+$h3-font-size:                1.5rem; // ~24px
+$h4-font-size:                1.125rem; // ~18px
+$h5-font-size:                0.875rem; //~14px
+$h6-font-size:                0.75rem; // ~12px
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$headings-font-weight:        300;
 
-$headings-margin-bottom:      ($spacer / 2) !default;
-$headings-font-family:        inherit !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
-$headings-color:              inherit !default;
 
-$display1-size:               6rem !default;
-$display2-size:               5.5rem !default;
-$display3-size:               4.5rem !default;
-$display4-size:               3.5rem !default;
-
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
-$display-line-height:         $headings-line-height !default;
-
-$lead-font-size:              ($font-size-base * 1.25) !default;
-$lead-font-weight:            300 !default;
-
-$small-font-size:             80% !default;
-
-$text-muted:                  $dell-quartz;
-
+$display1-size:               4.375rem; // ~70px
+$display2-size:               4.063rem; // 65px
+$display3-size:               3.438rem; // ~ 55px
+$display4-size:               2.813rem; // ~ 45px
+$small-font-size:             85%;
+$text-muted:                  $dell-moon;
 $blockquote-small-color:      $dell-carbon;
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        ($font-size-base * 1.286);
 
-$hr-border-color:             dell-gray;
-$hr-border-width:             $border-width !default;
-
-$mark-padding:                .2em !default;
-
-$dt-font-weight:              $font-weight-normal;
-
-$kbd-box-shadow:              inset 0 -.1rem 0 rgba($black, .25) !default;
-$nested-kbd-font-weight:      $font-weight-bold !default;
-
-$list-inline-padding:         .5rem !default;
-
-$mark-bg:                     #fcf8e3 !default;
-
-$hr-margin-y:                 $spacer !default;
+$hr-border-color:             $dell-ash;
+$mark-bg:                     $dell-quartz;
 
 
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .75rem !default;
-$table-cell-padding-sm:       .3rem !default;
+$table-cell-padding:          0.5714rem;
+$table-cell-padding-sm:       0.3571rem;
 
-$table-bg:                    transparent !default;
-$table-accent-bg:             rgba($black, .05) !default;
-$table-hover-bg:              rgba($black, .075) !default;
-$table-active-bg:             $table-hover-bg !default;
+$table-bg:                    transparent;
+$table-accent-bg:             $dell-quartz;
+$table-hover-bg:              $dell-cloud;
+$table-active-bg:             $dell-cloud;
 
-$table-border-width:          $border-width !default;
-$table-border-color:          $gray-300 !default;
+$table-border-color:          $dell-ash;
 
-$table-head-bg:               $gray-200 !default;
-$table-head-color:            $gray-700 !default;
+$table-head-bg:               $dell-quartz;
+$table-head-color:            $dell-carbon;
 
-$table-dark-bg:               $gray-900 !default;
-$table-dark-accent-bg:        rgba($white, .05) !default;
-$table-dark-hover-bg:         rgba($white, .075) !default;
-$table-dark-border-color:     lighten($gray-900, 7.5%) !default;
-$table-dark-color:            $body-bg !default;
-
+$table-dark-bg:               $dell-carbon;
+$table-dark-accent-bg:        rgba($dell-mist, .05);
+$table-dark-hover-bg:         rgba($dell-mist, .075);
+$table-dark-border-color:     lighten($dell-carbon, 7.5%);
+$table-dark-color:            $body-bg;
 
 // Buttons + Forms
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
-$input-btn-line-height:       $line-height-base !default;
+$input-btn-padding-y:         0.625rem;
+$input-btn-padding-x:         0.9375rem;
+$input-btn-line-height:       $line-height-base;
 
-$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-width:       .15rem; //turn off focus state
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      .25rem !default;
-$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-padding-y-sm:      0.2857rem;
+$input-btn-padding-x-sm:      0.5rem;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
-$input-btn-padding-y-lg:      .5rem !default;
-$input-btn-padding-x-lg:      1rem !default;
+$input-btn-padding-y-lg:      1.071rem; // same as default btn
+$input-btn-padding-x-lg:      0.7143rem; // same as default btn
 $input-btn-line-height-lg:    $line-height-lg !default;
 
-$input-btn-border-width:      $border-width !default;
+$input-btn-border-width:      $border-width;
 
 
 // Buttons
@@ -408,20 +190,30 @@ $btn-font-weight:             $font-weight-normal !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity:        .65 !default;
+$btn-disabled-opacity:        $dell-moon;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-disabled-color:     $dell-moon;
 
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
-$btn-border-radius-lg:        $border-radius-lg !default;
-$btn-border-radius-sm:        $border-radius-sm !default;
+$btn-border-radius:           0rem;
+$btn-border-radius-lg:        $btn-border-radius;
+$btn-border-radius-sm:        $btn-border-radius;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
+
+//======================
+// Forms
+
+$input-disabled-bg:                     $dell-moon;
+$input-color:                           $dell-moon;
+$input-border-color:                    $dell-ash;
+$input-box-shadow:                      inset 0 2px 2px rgba($black, .75);
+
+//=============================================
 
 // Forms
 
