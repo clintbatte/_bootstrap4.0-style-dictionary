@@ -2,7 +2,7 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "custom_variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "custom_type";
-@import "custom_forms";
-//@import "custom_styles";
+@import "components/custom_type.scss";
+@import "components/custom_forms";
+@import "components/custom_buttons";
 

@@ -6,7 +6,6 @@
 //
 // Dell Color system
 //
-
 // Dell Grays
 // ------------------------------------------
 $dell-carbon:                     #444444;
@@ -287,7 +286,7 @@ $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1.45;
 
 $h1-font-size:                2.25rem; // ~36px
 $h2-font-size:                1.875rem; // ~30px
@@ -377,8 +376,8 @@ $input-btn-focus-width:       .15rem;
 $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
 $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      .25rem !default;
-$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-padding-y-sm:      0.1875rem;
+$input-btn-padding-x-sm:      0.4375rem;
 $input-btn-line-height-sm:    $line-height-sm !default;
 
 $input-btn-padding-y-lg:      .5rem !default;
@@ -407,18 +406,19 @@ $btn-line-height-lg:          $input-btn-line-height-lg !default;
 $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             $font-weight-normal !default;
-$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
-$btn-focus-width:             $input-btn-focus-width !default;
-$btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity:        .65 !default;
-$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+$btn-box-shadow:              inset 0px 4px 10px 0.15px rgba(14, 14, 14, 0.5);
+//$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 5px 5px rgba($black, .075);
+$btn-focus-width:             0rem;
+$btn-focus-box-shadow:        inset 0px 4px 10px 0.15px rgba(14, 14, 14, 0.5);
+$btn-disabled-opacity:        $dell-moon;
+$btn-active-box-shadow:       inset 0px 4px 10px 0.15px rgba(14, 14, 14, 0.5);
 
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-disabled-color:     $dell-moon;
 
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius !default;
+$btn-border-radius:           0rem;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
 
@@ -452,7 +452,7 @@ $input-border-radius-lg:                $border-radius-lg !default;
 $input-border-radius-sm:                $border-radius-sm !default;
 
 $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              lighten($component-active-bg, 25%) !default;
+$input-focus-border-color:              $dell-blue;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
